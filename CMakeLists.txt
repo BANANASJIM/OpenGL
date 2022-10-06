@@ -8,6 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(imgui CONFIG REQUIRED)
+
+
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
@@ -18,3 +21,4 @@ add_executable(MyOpenGL ${SRCS})
 target_link_libraries(MyOpenGL PRIVATE glad::glad)
 target_link_libraries(MyOpenGL PRIVATE glfw)
 target_link_libraries(MyOpenGL PRIVATE glm::glm)
+target_link_libraries(MyOpenGL PRIVATE imgui::imgui)
